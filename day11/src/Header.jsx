@@ -1,55 +1,24 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        backgroundColor: '#061B33',
-        color: '#FFFFFF',
-        padding: '10px 25px'
-      }}
-    >
-      <h2 style={{ color: '#94e7f5' }}>
-        My Store
-      </h2>
+    <div>
+      <div>MyApp</div>
 
-      <div style={{ display: 'flex', gap: '20px' }}>
-        <a href="/" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-          Home
-        </a>
+      <div style={{ display: 'flex', gap: '25px' }}>
+        <div onClick={() => navigate('/')}>Home</div>
 
-        <a href="/about" style={{ color: '#A58BFA', textDecoration: 'none' }}>
-          About
-        </a>
-
-        <a href="/products" style={{ color: '#FB9A1E', textDecoration: 'none' }}>
+        <div onClick={() => navigate('/products')}>
           Products
-        </a>
+        </div>
 
-        <a href="/cart" style={{ color: '#20B685', textDecoration: 'none' }}>
-          Cart
-        </a>
+        <div onClick={() => navigate('/about')}>About</div>
 
-        <a href="/contact" style={{ color: '#FF5740', textDecoration: 'none' }}>
-          Contact
-        </a>
+        <div onClick={() => navigate('/cart')}>Cart</div>
       </div>
-
-      <button
-        style={{
-          backgroundColor: '#E6FB3F',
-          color: '#061B33',
-          border: 'none',
-          padding: '10px 15px',
-          borderRadius: '5px',
-          cursor: 'pointer'
-        }}
-      >
-        Login
-      </button>
     </div>
   );
 };
