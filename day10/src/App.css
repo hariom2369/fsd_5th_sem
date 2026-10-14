@@ -1,0 +1,13 @@
+.slider {
+  margin-top: 30px;
+}
+
+.slider h1 {
+  font-size: 45px;
+}
+
+.slider-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
